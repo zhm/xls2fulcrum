@@ -1,0 +1,68 @@
+html, body {
+  font-family: Sans-Serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+  padding: 12px 0;
+}
+
+.header-center {
+  width: 800px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.header-center img {
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+#container {
+  width: 800px;
+  margin: 10px auto;
+}
+
+#token {
+  width: 725px;
+	border: 1px solid #bbb;
+	border-radius: 2px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#upload {
+  font-size: 18px;
+}
+
+#errors {
+  margin-top: 10px;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  background-color: #EEB4B4;
+  padding: 10px;
+}
+
+#drop {
+	border: 2px dashed #bbb;
+	border-radius: 5px;
+	padding: 25px;
+	text-align: center;
+	font: 20pt bold,"Vollkorn";
+  color: #bbb;
+}
+
+#form {
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 792px;
+  min-width: 792px;
+  max-width: 792px;
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  font-family: 'Courier New';
+}

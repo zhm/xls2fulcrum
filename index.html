@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>XLS to Fulcrum</title>
+    <script src="xls.js"></script>
+    <script src="shim.js"></script>
+    <script src="underscore.js"></script>
+    <script src="superagent.js"></script>
+    <script src="cookies.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css" type="text/css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <div id="header">
+      <div class="header-center">
+        <img alt="Fulcrum" src="http://fulcrumapp.com/assets/img/logo-fulcrum.png"/>
+        <h1 style="display:none;">XLSForm Converter</h1>
+      </div>
+    </div>
+    <div id="container">
+      <div id="drop">Drop an ODK / FormHub XLS file here.</div>
+      <textarea name="form" id="form" placeholder="JSON output will be displayed here"></textarea>
+      <div id="errors" style="display:none;"></div>
+      <div class="form-upload">
+        <input type="text" id="token" name="token" placeholder="Enter your API key"/>
+        <input type="button" value="Upload" id="upload" name="upload"/>
+      </div>
+    </div>
+  </body>
+</html>
