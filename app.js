@@ -2,14 +2,14 @@
 Converter = function() {}
 
 Converter.prototype.toJSON = function(workbook) {
-	var result = {};
-	workbook.SheetNames.forEach(function(sheetName) {
-		var roa = XLS.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-		if (roa.length > 0){
-			result[sheetName] = roa;
-		}
-	});
-	return result;
+  var result = {};
+  workbook.SheetNames.forEach(function(sheetName) {
+    var roa = XLS.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+    if (roa.length > 0){
+      result[sheetName] = roa;
+    }
+  });
+  return result;
 }
 
 Converter.prototype.process = function(workbook) {
@@ -278,28 +278,28 @@ Converter.prototype.updateErrors = function() {
 }
 
 Converter.prototype.handleDrop = function(e) {
-	e.stopPropagation();
-	e.preventDefault();
-	var files = e.dataTransfer.files;
-	var i,f;
-	for (i = 0, f = files[i]; i != files.length; ++i) {
-		var reader = new FileReader();
-		var name = f.name;
+  e.stopPropagation();
+  e.preventDefault();
+  var files = e.dataTransfer.files;
+  var i,f;
+  for (i = 0, f = files[i]; i != files.length; ++i) {
+    var reader = new FileReader();
+    var name = f.name;
     converter.fileName = name;
-		reader.onload = function(e) {
-			var data = e.target.result;
-			var cfb = XLS.CFB.read(data, {type: 'binary'});
-			var wb = XLS.parse_xlscfb(cfb);
-			converter.process(wb);
-		};
-		reader.readAsBinaryString(f);
-	}
+    reader.onload = function(e) {
+      var data = e.target.result;
+      var cfb = XLS.CFB.read(data, {type: 'binary'});
+      var wb = XLS.parse_xlscfb(cfb);
+      converter.process(wb);
+    };
+    reader.readAsBinaryString(f);
+  }
 }
 
 Converter.prototype.handleDragover = function(e) {
-	e.stopPropagation();
-	e.preventDefault();
-	e.dataTransfer.dropEffect = 'copy';
+  e.stopPropagation();
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'copy';
 }
 
 window.onload = function() {
